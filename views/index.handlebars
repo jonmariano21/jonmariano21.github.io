@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+
+	<head>
+	
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    
+	
+	    <!-- CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	    <!--- Javascript for the time -->
+	    <script>
+		    function date_time(id)
+			{
+		        date = new Date;
+		        year = date.getFullYear();
+		        month = date.getMonth();
+		        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+		        d = date.getDate();
+		        day = date.getDay();
+		        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+		        h = date.getHours();
+		        if(h<10)
+		        {
+		                h = "0"+h;
+		        }
+		        m = date.getMinutes();
+		        if(m<10)
+		        {
+		                m = "0"+m;
+		        }
+		        s = date.getSeconds();
+		        if(s<10)
+		        {
+		                s = "0"+s;
+		        }
+		        result = days[day]+', '+months[month]+' '+d+', '+year+' | '+h+':'+m+':'+s;
+		        document.getElementById(id).innerHTML = result;
+		        setTimeout('date_time("'+id+'");','1000');
+		        return true;
+			}
+		</script>
+
+		<title>Emotion Notion</title>
+	
+	</head>
+
+<body>
+    
+
+        <!-- NAVBAR			
+        ======================================================================================================================================= -->	   	
+	    <div class = "navbar navbar-inverse navbar-static-top"> <!--Black bar accross the top-->
+			<div class = "container">
+				<a href = "/" class = "navbar-brand"> Emotion Notion </a>
+
+				<!--Create Button-->
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse"> <!--When this button is pressed it targets navHeadercollapse-->
+
+					<!--#of Lines in the mobile sized dropdown button-->
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+
+				</button>
+
+				<!--Collapsable navbar-->
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-right">
+
+						<li class = "active"> <a href = "/"> Home </a> </li> <!--active makes Home indented-->
+
+						<li> <a href = "/about"> About Us</a></li>
+
+						<li> <a href = "/timeLine"> Timeline </a> </li>
+
+						<li> <a href = "/help"> Help </a> </li>	
+
+						<li> <a href = "/contact"> Contact </a></li>	
+
+					</ul>
+				</div>
+			</div>
+		</div>
+        <!-- END END END NAVBAR			
+        ======================================================================================================================================= -->		
+		
+		<!-- EMOTIONS
+		===============================================================================================================================-->	
+		<div class="container">
+		
+        <!----- TIME ---->
+        <center><h4><span id="date_time"></span></h4>
+        <script type="text/javascript">window.onload = date_time('date_time');</script>	
+
+			<h1 id="howDoYouFeel"> How are you feeling right now? </h1>	
+			<h5 style="margin-left:10px;"> Select an emotion to get started.</h5>
+			<table>
+				<!-- First ROW -->
+				<tr>
+					<td> 
+						<!-- Confused
+						================================================== CONFUSED ============================================= 	-->	
+						<div class="emotion">
+							<img src="http://oi62.tinypic.com/6gx8ia.jpg" onClick="parent.location='/description?emotion=http://oi62.tinypic.com/6gx8ia.jpg&face=confused' " id="#confused">
+						</div> 
+					</td>
+					<td> 
+						<!-- Angry
+					    ================================================== ANGRY =============================================== 	-->	
+						<div class="emotion">
+							<img src="http://oi57.tinypic.com/2s60cd0.jpg" onClick="parent.location='/description?emotion=http://oi57.tinypic.com/2s60cd0.jpg&face=angry' ">
+						</div> 
+					</td>
+					<td> 
+						<!-- Ecstatic
+						================================================== ECSTATIC ============================================= 	-->	
+						<div class="emotion">
+							<img src="http://i60.tinypic.com/jto1zd_th.png" onClick="parent.location='/description?emotion=http://i60.tinypic.com/jto1zd_th.png&face=ecstatic' ">
+						</div> 
+					</td>
+					
+					
+				</tr>
+				<!-- 2nd Row -->
+				<tr>
+					<td> 
+						<!-- EXHAUSTED
+						================================================== EXHAUSTED ============================================= 	-->	
+						<div class="emotion">
+							<img src="http://oi58.tinypic.com/2cxb9ld.jpg" onClick="parent.location='/description?emotion=http://oi58.tinypic.com/2cxb9ld.jpg&face=exhausted' ">
+						</div> 
+					</td>
+					<td> 
+						<!-- Confident
+						================================================== CONFIDENT ============================================= 	-->	
+						<div class="emotion">
+							<img src="http://i58.tinypic.com/1z568ba_th.png" onClick="parent.location='/description?emotion=http://i58.tinypic.com/1z568ba_th.png&face=confident' ">
+						</div> 
+					</td>
+					<td> 
+						<!-- Happy
+					    ================================================== HAPPY =============================================== 	-->	
+						<div class="emotion">
+							<img src="http://oi62.tinypic.com/2imafp.jpg" onClick="parent.location='/description?emotion=http://oi62.tinypic.com/2imafp.jpg&face=happy' ">
+						</div> 
+					</td>
+					
+				</tr>
+				
+				<!-- 3rd Row -->
+				<tr>
+					<td> 
+						<!-- Depressed
+						================================================== DEPRESSED ============================================= 	-->	
+						<div class="emotion">
+							<img src="http://i62.tinypic.com/2elay6h_th.png" onClick="parent.location='/description?emotion=http://i62.tinypic.com/2elay6h_th.png&face=depressed' ">
+						</div> 
+					</td>
+					<td> 
+						<!-- Overwhelmed
+						================================================== OVERWHELMED ========================================== 	-->	
+						<div class="emotion">
+							<img src="http://i62.tinypic.com/4ki8pl_th.png" onClick="parent.location='/description?emotion=http://i62.tinypic.com/4ki8pl_th.png&face=overwhelmed' ">
+						</div> 
+					</td>
+					<td> 
+						<!-- Sad
+						================================================== SAD ============================================= 	-->	
+						<div class="emotion">
+							<img src="http://oi62.tinypic.com/2uepgxy.jpg" onClick="parent.location='/description?emotion=http://oi62.tinypic.com/2uepgxy.jpg&face=sad' ">
+						</div> 
+					</td>
+					
+					
+				</tr>
+				<!-- 4th Row -->
+				<tr>
+						<td> 
+						<!-- Embarrassed
+					    ================================================== EMBARRASSED =========================================== 	-->	
+						<div class="emotion">
+							<img src="http://oi60.tinypic.com/2urxslf.jpg" onClick="parent.location='/description?emotion=http://oi60.tinypic.com/2urxslf.jpg&face=embarrassed' ">
+						</div> 
+					</td>
+					<td> 
+						<!-- Frustrated
+						================================================== FRUSTRATED ========================================== 	-->	
+						<div class="emotion">
+							<img src="http://oi60.tinypic.com/2zojds6.jpg" onClick="parent.location='/description?emotion=http://oi60.tinypic.com/2zojds6.jpg&face=frustrated' ">
+						</div> 
+					</td>
+					<td> 
+						<!-- Love
+						================================================== LOVE ============================================= 	-->	
+						<div class="emotion">
+							<img src="http://oi60.tinypic.com/1sfek0.jpg" onClick="parent.location='/description?emotion=http://oi60.tinypic.com/1sfek0.jpg&face=love' ">
+						</div> 
+					</td>
+				</tr>
+				
+			</table>
+			</center>
+		</div><!-- close container-->
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

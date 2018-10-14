@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+	
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    
+	
+	    <!-- CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="landing.css" rel="stylesheet" type="text/css">
+
+		<title>Emotion Notion</title>
+	
+	</head>
+
+<body>
+
+    <script>
+        var param1var = getQueryVariable("emotion");
+        function getQueryVariable(variable) {
+          var query = window.location.search.substring(1);
+          var vars = query.split("&");
+          for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+              return pair[1];
+            }
+          } 
+          alert('Query Variable ' + variable + ' not found');
+        }
+
+        var img = document.createElement("img");
+        img.src = param1var;
+        img.width = 96;
+        img.height = 124;
+        document.addEventListener('DOMContentLoaded', function(){
+          document.getElementById("placehere").appendChild(img);
+        }, false);
+
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+               <center><h1 id="placehere"> You feel </h1></center>
+                        
+
+                  <section id="scroller" class="overflow">
+                  
+                    <form id="projectForm" role="form" method='get' action="/timeLine">
+                    
+                        <div class="form-group">
+
+                          
+                        </div>
+
+                        <div class="form-group">
+                          	<label for="description">Why Do You Feel This Way?</label>
+                          	
+            						  	<input type="text" class="form-control" id="description" placeholder="First thing that comes to mind?" name="description">
+                            <input type="hidden" name="image_url" value={{emotion}}>
+                            <input type="hidden" name="face" value={{face}}> 
+                            <input type="hidden" name="time" value={{date}}>
+                        </div>
+                        
+                        <button id="submitBtn" type="submit" class="btn btn-default" >
+                            Submit
+                        </button>
+                        
+                         <!-- CANCEL Button -->
+                         <input class="btn btn-default" type="button"  onClick="parent.location='/' " value="Cancel"> <!-- if cancel go Home -->
+                      </form>
+
+                  </section>
+            </div> <!-- CLose Col -->
+
+        </div>
+        <!-- /.row -->
+    </div> <!-- CLOSE CONTAINER -->
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+     <script src="js/description.js"></script>
+
+</body>
+
+</html>
